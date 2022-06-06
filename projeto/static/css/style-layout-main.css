@@ -1,0 +1,140 @@
+/*________________________________GENERAL________________________________*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+/*________________________________NAVBAR________________________________*/
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #494949;
+    box-shadow: 0px 1px 3px 0px #494949;
+    margin-bottom: 20px;
+    padding: 2px !important;
+}
+
+#navbarNav {
+    margin: 0 40px 0 25px;
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-item {
+    padding: 0px 5px;
+}
+
+.navbar .nav-item:hover {
+    background-color: #6e9fda !important;
+}
+
+.navbar a.nav-link {
+    color: #787878 !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar a.nav-link:hover {
+    color: #ffffff !important;
+}
+
+.navbar .nav-item a.nav-link i {
+    margin-right: 4px;
+}
+
+/* User information button ( dropdown button ) */
+.navbar #button-dropdown .dropdown {
+    border: 2px solid #000000;
+    border-radius: 40px;
+}
+
+.navbar #button-dropdown a.dropdown-item {
+    color: #787878 !important;
+    font-size: 14px;
+}
+
+.navbar #button-dropdown a.dropdown-item i {
+    margin-right: 3px;
+}
+
+/* button Search */
+.navbar .search-box {
+    background-color: #ffffff;
+
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .search-box .search-text {
+    background: none;
+    font-size: 14px;
+
+    border: 0;
+    outline: 0;
+    width: 0;
+
+    transition: 0.4s;
+}
+
+.navbar .search-box .search-btn {
+    width: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .search-box .search-btn #loupe-search {
+    font-size: 16px;
+    color: #787878;
+}
+
+.navbar .search-box:hover {
+    border: 2px solid #000000;
+}
+
+.navbar .search-box:hover>.search-text {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.navbar .search-box:hover>.search-btn #loupe-search {
+    color: #000000;
+}
+
+
+/*________________________________FOOTER________________________________*/
+footer {
+    text-align: center;
+
+    background-color: #ffffff;
+    color: #0c0c0c;
+
+    box-shadow: 0px 1px 3px 0px #494949;
+    font-weight: bold;
+
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
+}
