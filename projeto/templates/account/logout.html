@@ -1,0 +1,29 @@
+{% extends 'layouts/main.html' %}
+
+{% load static %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3 mx-auto">
+        <div class="card">
+            <div class="card_body text-center">
+
+                <h3 class="mt-5 mb-4">Sair</h3>
+                <p class="mb-4">Você Tem certeza que deseja sair?</p>
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <button type="submit" class="btn btn-danger mb-5">Sair</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

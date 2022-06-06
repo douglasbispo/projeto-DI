@@ -22,4 +22,7 @@ urlpatterns = [
 
     # local urls
     path("", include("core.urls")),
+
+    # user management 
+    path('accounts/', include('allauth.urls')),
 ]

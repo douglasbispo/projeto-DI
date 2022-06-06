@@ -39,6 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    # 3rd party
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "crispy_forms", 
+
     # local app
     "core.apps.CoreConfig",
 ]
@@ -107,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -127,3 +135,33 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Django-allauth
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = "/"
+
+# remover lembar do usuário
+ACCOUNT_SESSION_REMEMBER = False
+# comfirmar email no terminal
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# pedir duas senhas no cadastro
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+# não é necessário username
+# ACCOUNT_USERNAME_REQUIRED = False
+# método de autenticação
+# ACCOUNT_AUTHENTICATION_METHOD = "email"
+# ACCOUNT_EMAIL_REQUIRED = True
+# email único
+# ACCOUNT_UNIQUE_EMAIL = True
+
+
+# django-crisy-forms
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
