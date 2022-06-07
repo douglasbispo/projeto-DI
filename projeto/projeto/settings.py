@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # local app
     "core.apps.CoreConfig",
+    "products.apps.ProductsConfig",
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,15 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# image upload
+
+MEDIA_URL = "/uploads/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
 
 
 # Django-allauth

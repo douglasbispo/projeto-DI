@@ -46,19 +46,21 @@
                             </a>
                         </li>
 
+                        {% if request.user.groups.all.0.name == "Admin" %}
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fa-brands fa-discourse"></i>
-                                Cursos
+                                Lista de produtos
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <i class="fa-solid fa-address-book"></i>
-                                Contato
+                                Cadastrar produtos
                             </a>
                         </li>
+                        {% endif %}
                     </ul>
 
                     <form class="d-flex">
