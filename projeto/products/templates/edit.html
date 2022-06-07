@@ -3,7 +3,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block title %}Cadastro de produtos{% endblock %}
+{% block title %}Editando: '{{ product.name }}'{% endblock %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-body">
 
-                <h3 class="mt-3 mb-5 text-center">Cadastrar produto</h3>
+                <h3 class="mt-3 mb-5 text-center">Editar produto</h3>
 
                 <form action="" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}

@@ -1,0 +1,77 @@
+{% extends 'layouts/main.html' %}
+
+{% load static %}
+
+{% block title %}Lista de produtos{% endblock %}
+
+{% block content %}
+<div class="row">
+
+    {% if request.user.groups.all.0.name == "Admin" %}
+
+    <div class="col-md-8 mx-auto dashboard-title-container">
+        <h1 class="mb-5">Lista de Produtos</h1>
+    </div>
+    <div class="col-md-8 mx-auto dashboard-products-container">
+        {% if not products %}
+        <p>Ainda não tem nenhum produto cadastrado, <a href="{% url 'create' %}">Cadastrar produto?</a></p>
+        {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td scope="row">
+                        {{ forloop.counter }}
+                    </td>
+                    <td>
+                        <a href="#">
+                            {{ product.name }}
+                    </td>
+                    <td>
+                        {{ product.description }}
+                    </td>
+                    <td>
+                        <a href="/produtos/editar/{{ product.id }}" class="btn btn-outline-info btn-sm edit-btn">
+                            <ion-icon name="create-outline"></ion-icon>
+                            Editar
+                        </a>
+                        <a href="/produtos/excluir/{{ product.id }}" class="btn btn-outline-danger btn-sm delete-btn">
+                            <ion-icon name="trash-outline"></ion-icon>
+                            Deletar
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+    {% else %}
+
+    <div class="col-md-6 mx-auto">
+        <h3 class="mt-5 mb-3">Ação não permitida</h3>
+        <hr>
+        <p class="lead">
+            <strong>
+                Sua conta não tem acesso a esta página. Para prosseguir,
+                por favor faça login com uma conta que tenha acesso.
+            </strong>
+        </p>
+    </div>
+
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

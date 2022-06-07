@@ -48,14 +48,14 @@
 
                         {% if request.user.groups.all.0.name == "Admin" %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{% url 'dashboard' %}">
                                 <i class="fa-brands fa-discourse"></i>
                                 Lista de produtos
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="{% url 'create' %}">
                                 <i class="fa-solid fa-address-book"></i>
                                 Cadastrar produtos
                             </a>
@@ -66,7 +66,8 @@
                     <form class="d-flex">
                         <div class="search-box">
 
-                            <input class="search-text" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <input class="search-text" type="search" placeholder="Busque um produto..."
+                                aria-label="Search" id="search" name="search">
 
                             <a href="#" class="search-btn">
                                 <i class="fa-solid fa-magnifying-glass" id="loupe-search"></i>

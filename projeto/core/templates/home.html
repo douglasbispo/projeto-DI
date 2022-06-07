@@ -1,9 +1,58 @@
-{% extends "layouts/main.html" %}
+{% extends 'layouts/main.html' %}
 
-{% block title %}Página inicial{% endblock %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Cadastro de produtos{% endblock %}
 
 {% block content %}
+<div class="container">
+    <div class="row" id="cards-container">
 
-<h1>Página inicial</h1>
+        {% if request.GET.search %}
 
+        <h3 class="mb-4">Buscando por: {{ request.GET.search }}</h3>
+
+        {% else %}
+
+        <h2>Produtos</h2>
+        <p class="subtitle mb-4">Veja todos os produtos</p>
+
+        {% endif %}
+
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <img src="/uploads/{{ product.image }}" alt="{{ product.name }}" width="100%" height="200px">
+                </div>
+                <div class="card-body">
+
+                    <h5 class="card-name">{{ product.name }}</h5>
+                    <p class="card-description">{{ product.description }}</p>
+                    <p class="card-quantity">Quantidade: {{ product.quantity }}</p>
+                    <p class="card-price">Preço: {{ product.price }}</p>
+                    <p class="card-validity">Validade: {{ product.validity }}</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+        {% if not products and request.GET.search %}
+        <p>
+            Não foi possível encontrar nenhum produto com {{ request.GET.search }}.
+            <a href="{% url 'home' %}"> Ver todos? </a>
+        </p>
+        {% elif not products %}
+        <p>Não há produtos disponíveis</p>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
