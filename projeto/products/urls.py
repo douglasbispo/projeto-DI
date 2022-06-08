@@ -5,4 +5,5 @@ urlpatterns = [
     path("cadastrar/", views.CreateView, name="create"),
     path("excluir/<int:id>", views.DeleteView, name="delete"),
     path("editar/<int:id>", views.EditView, name="edit"),
+    path("datalhes/<int:id>", views.DetailsView, name="details"),
 ]

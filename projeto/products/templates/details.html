@@ -1,0 +1,44 @@
+{% extends 'layouts/main.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Editando: '{{ product.name }}'{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div id="image-container" class="offset-md-1 col-md-4">
+            <img src="/uploads/{{ product.image }}" class="img-fluid" alt="{{ product.name }}">
+        </div>
+        <div id="info-container" class="col-md-4">
+            <h1>{{ product.name }}</h1>
+            <p class="product-quantity">
+                <i class="fa-solid fa-arrow-up-9-1"></i>
+                Quantidade: {{ product.quantity }}
+            </p>
+            <p class="product-price">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <!-- <i class="fa-solid fa-dollar-sign"></i> -->
+                Preço: R${{ product.price }}
+            </p>
+            <p class="product-validity">
+                <i class="fa-solid fa-calendar-day"></i>
+                Validade: {{ product.validity }}
+            </p>
+            <form action="" method="POST">
+                <a href="#" class="btn btn-primary" id="btn-submit">
+                    Comprar
+                </a>
+            </form>
+        </div>
+        <div id="description-container" class="col-md-10 mx-auto">
+            <h4>Descrição:</h4>
+            <p class="product-description">
+                {{ product.description }}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

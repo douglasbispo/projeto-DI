@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">Study Easy</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Mercadinho</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,14 +49,14 @@
                         {% if request.user.groups.all.0.name == "Admin" %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'dashboard' %}">
-                                <i class="fa-brands fa-discourse"></i>
+                                <i class="fa-solid fa-list"></i>
                                 Lista de produtos
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'create' %}">
-                                <i class="fa-solid fa-address-book"></i>
+                                <i class="fa-solid fa-cart-plus"></i>
                                 Cadastrar produtos
                             </a>
                         </li>
@@ -69,9 +69,9 @@
                             <input class="search-text" type="search" placeholder="Busque um produto..."
                                 aria-label="Search" id="search" name="search">
 
-                            <a href="#" class="search-btn">
+                            <button type="submit" class="search-btn">
                                 <i class="fa-solid fa-magnifying-glass" id="loupe-search"></i>
-                            </a>
+                            </button>
 
                         </div>
                     </form>

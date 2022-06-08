@@ -5,6 +5,19 @@
 {% block title %}Lista de produtos{% endblock %}
 
 {% block content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
 <div class="row">
 
     {% if request.user.groups.all.0.name == "Admin" %}
@@ -21,7 +34,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Quantidade</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -32,11 +46,14 @@
                         {{ forloop.counter }}
                     </td>
                     <td>
-                        <a href="#">
+                        <a href="/produtos/datalhes/{{ product.id }}">
                             {{ product.name }}
                     </td>
                     <td>
-                        {{ product.description }}
+                        {{ product.price }}
+                    </td>
+                    <td>
+                        {{ product.quantity }}
                     </td>
                     <td>
                         <a href="/produtos/editar/{{ product.id }}" class="btn btn-outline-info btn-sm edit-btn">
@@ -71,7 +88,4 @@
     {% endif %}
 </div>
 
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

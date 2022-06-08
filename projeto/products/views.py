@@ -34,9 +34,9 @@ def DeleteView(request, id):
     product = get_object_or_404(Product, pk=id)
     product.delete()
 
-    messages.info(request, 'Produto excluido com sucesso!')
+    messages.info(request, "Produto excluido com sucesso!")
 
-    return redirect('dashboard')
+    return redirect("dashboard")
 
 
 
@@ -52,11 +52,19 @@ def EditView(request, id):
         if (form.is_valid()):
             product.save()
 
-            messages.info(request, 'Produto editado com sucesso!')
+            messages.info(request, "Produto editado com sucesso!")
 
-            return redirect('dashboard')
+            return redirect("dashboard")
         else:
-            return render(request, 'edit.html', {'form': form, 'product': product})
+            return render(request, "edit.html", {"form": form, "product": product})
 
     else:
-        return render(request, 'edit.html', {'form': form, 'product': product})
+        return render(request, "edit.html", {"form": form, "product": product})
+
+
+
+def DetailsView(request, id):
+
+    product = get_object_or_404(Product, pk=id)
+
+    return render(request, 'details.html', {'product': product})

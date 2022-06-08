@@ -10,16 +10,71 @@
 <div class="row">
     {% if request.user.groups.all.0.name == "Admin" %}
 
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-5 mx-auto" id="product-create-container">
         <div class="card">
             <div class="card-body">
 
                 <h3 class="mt-3 mb-5 text-center">Cadastrar produto</h3>
 
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
                     {% csrf_token %}
 
-                    {{ form|crispy }}
+                    <div class="form-group mb-3">
+                        <label for="image" class="form-label">Imagem do produto:</label>
+                        <input type="file" name="image" id="image" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Nome do produto..."
+                            required>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="quantity" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control" name="quantity" id="quantity"
+                            placeholder="Quantidade..." required>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="price" class="form-label">Preço</label>
+                        <input type="text" class="form-control" name="price" id="price" placeholder="Preço..." required>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="price" class="form-label">Validade</label>
+                        <input type="date" class="form-control" name="validity" id="validity" placeholder="Validade..."
+                            required>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="description" class="form-label">Descrição</label>
+                        <textarea class="form-control" name="description" id="description" rows="3"
+                            placeholder="Descrição..." required></textarea>
+                        <div class="invalid-feedback">
+                            Este campo é de preenchimento obrigatório
+                        </div>
+                    </div>
 
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary mt-3 mb-3">Cadastrar</button>
@@ -44,7 +99,4 @@
 
     {% endif %}
 </div>
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

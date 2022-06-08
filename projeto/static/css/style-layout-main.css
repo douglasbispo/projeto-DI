@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, "Arial";
 }
 
 body {
@@ -91,7 +92,9 @@ body {
 }
 
 .navbar .search-box .search-btn {
+    background-color: #ffffff;
     width: 30px;
+    border: none;
     border-radius: 50%;
     text-decoration: none;
 

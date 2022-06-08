@@ -6,8 +6,21 @@
 {% block title %}Cadastro de produtos{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row" id="cards-container">
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+<div class="container" id="products-container">
+    <div class="row">
 
         {% if request.GET.search %}
 
@@ -15,7 +28,7 @@
 
         {% else %}
 
-        <h2>Produtos</h2>
+        <h1>Produtos</h1>
         <p class="subtitle mb-4">Veja todos os produtos</p>
 
         {% endif %}
@@ -31,9 +44,10 @@
                     <h5 class="card-name">{{ product.name }}</h5>
                     <p class="card-description">{{ product.description }}</p>
                     <p class="card-quantity">Quantidade: {{ product.quantity }}</p>
-                    <p class="card-price">Preço: {{ product.price }}</p>
+                    <p class="card-price">Preço: R${{ product.price }}</p>
                     <p class="card-validity">Validade: {{ product.validity }}</p>
                     <a href="#" class="btn btn-primary">Comprar</a>
+                    <a href="/produtos/datalhes/{{ product.id }}" class="btn btn-primary">Mais detalhes</a>
 
                 </div>
             </div>
@@ -52,7 +66,4 @@
 
     </div>
 </div>
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

@@ -1,0 +1,136 @@
+/*________________________________Home page________________________________*/
+#products-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+
+#products-container .subtitle {
+    color: #757575;
+}
+
+#products-container img {
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card .card-name {
+    font-size: 24px;
+    color: #212121;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card .card-description {
+    color: #757575;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card .card-validity {
+    margin-bottom: 20px;
+}
+
+
+/*________________________________Products create page (template de cadastro)________________________________*/
+#product-create-container label {
+    font-weight: bold;
+}
+
+#product-create-container input,
+#product-create-container select,
+#product-create-container textarea {
+    font-size: 14px;
+}
+
+
+/*________________________________Products edit page (template de editar)________________________________*/
+#product-edit-container label {
+    font-weight: bold;
+}
+
+#product-edit-container input,
+#product-edit-container select,
+#product-edit-container textarea {
+    font-size: 14px;
+}
+
+/*________________________________More Details________________________________*/
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#info-container h1 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+#info-container p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container i {
+    font-size: 16px;
+    color: #f2a340;
+    margin-right: 5px;
+}
+
+#info-container #btn-submit {
+    margin: 20px 0;
+}
+
+#description-container {
+    margin-top: 30px;
+}
+
+#description-container h4 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*________________________________Dashboard________________________________*/
+.dashboard-title-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+.dashboard-products-container th {
+    width: 21%;
+}
+
+.dashboard-products-container form {
+    display: inline-block;
+}
+
+
+/*________________________________Messages________________________________*/
+ul.messages {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul.messages li {
+    list-style: none;
+}
