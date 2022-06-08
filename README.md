@@ -8,7 +8,11 @@ O objetivo do projeto é suprir as necessidades básicas de um pequeno mercado, 
 
 ## Cores utilizadas
 **Menu** <br>
-Cor de fundo: #ffffff <br>
+<div style="width: 100px; height: 20px; background-color: #ee82ee;">
+Cor de fundo: #ffffff 
+</div>
+<p style="width: 100px; height: 20px; background-color: #ee82ee;"></p>
+<br>
 Cor do texto: #787878 <br>
 Cor da borda: #494949 <br>
 Cor do fundo no hover dos botões: #6e9fda <br>
