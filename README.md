@@ -12,7 +12,7 @@ Cor de fundo: #ffffff <br>
 Cor do texto: #787878 <br>
 Cor da borda: #494949 <br>
 Cor do fundo no hover dos botões: #6e9fda <br>
-Cor do texto no hover dos botões: #ffffff <br><br>
+Cor do texto no hover dos botões: #ffffff <br>
 
 **Conteúdo** <br>
 Cor de fundo: #ffffff <br>
@@ -20,8 +20,8 @@ Títulos: #2b2b2b <br>
 subtítulos: #757575 <br>
 Cores dos textos: #212121 e #000000 <br>
 Cores das bordas: #494949 <br>
-Descrições: #757575
-Icones: #f2a340
+Descrições: #757575 <br>
+Icones: #f2a340 <br>
 Botões: #0d6efd <br>
 
 **Rodapé** <br>
