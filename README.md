@@ -8,30 +8,27 @@ O objetivo do projeto é suprir as necessidades básicas de um pequeno mercado, 
 
 ## Cores utilizadas
 **Menu** <br>
-<div style="width: 100px; height: 20px; background-color: #ee82ee;">
-Cor de fundo: #ffffff 
-</div>
-<p style="width: 100px; height: 20px; background-color: #ee82ee;"></p>
-<br>
-Cor do texto: #787878 <br>
-Cor da borda: #494949 <br>
-Cor do fundo no hover dos botões: #6e9fda <br>
-Cor do texto no hover dos botões: #ffffff <br>
+
+Cor de fundo: `#ffffff` <br>
+Cor do texto: `#787878` <br>
+Cor da borda: `#494949` <br>
+Cor do fundo no hover dos botões: `#6e9fda` <br>
+Cor do texto no hover dos botões: `#ffffff` <br>
 
 **Conteúdo** <br>
-Cor de fundo: #ffffff <br>
-Títulos: #2b2b2b <br>
-subtítulos: #757575 <br>
-Cores dos textos: #212121 e #000000 <br>
-Cores das bordas: #494949 <br>
-Descrições: #757575 <br>
-Icones: #f2a340 <br>
-Botões: #0d6efd <br>
+Cor de fundo: `#ffffff` <br>
+Títulos: `#2b2b2b` <br>
+subtítulos: `#757575` <br>
+Cores dos textos: `#212121` e `#000000` <br>
+Cores das bordas: `#494949` <br>
+Descrições: `#757575` <br>
+Icones: `#f2a340` <br>
+Botões: `#0d6efd` <br>
 
 **Rodapé** <br>
-Cor de fundo: #ffffff <br>
-Cor do texto: #0c0c0c <br>
-Cor da borda: #494949 <br>
+Cor de fundo: `#ffffff` <br>
+Cor do texto: `#0c0c0c` <br>
+Cor da borda: `#494949` <br>
 
 
 ## Login
