@@ -14,25 +14,35 @@
         <div class="card">
             <div class="card-body">
 
-                <h3 class="mt-3 mb-5">Editando: {{ product.name }}</h3>
-
                 <form action="" method="POST" class="needs-validation" enctype="multipart/form-data">
                     {% csrf_token %}
 
-                    {{form|crispy}}
+                    <!-- {{form|crispy}} -->
+                    <!-- 
+                    <div class="box">
+                        <label class="avatar" for="btn">
+                            <img src="/uploads/{{ product.image }}" alt="{ product.name }}" width="100px"
+                                height="100px">
+                        </label>
+                        <input type="checkbox" id="btn">
+                        <div class="menu">
+                            <a href="#"><i class="fa fa-upload"> <span>upload</span></i></a>
+                            <br>
+                            <a href="#"><i class="fa fa-edit"> <span>edite</span></i></a>
+                        </div>
+                    </div> -->
 
-                    <!--                     <div class="form-group mb-3">
-                        <img src="/uploads/{{ product.image }}" alt="{{ product.name }}" class="img-preview"
-                            width="200px">
+                    <div class="form-group mb-1 mt-3">
+                        <img src="/uploads/{{ product.image }}" alt="{{ product.name }}" class="img-preview">
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="image" class="form-label">Alterar imagem</label>
                         <input type="file" name="image" id="image" class="form-control">
                     </div>
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Nome do produto..."
                             value="{{ product.name }}" required>
@@ -42,7 +52,7 @@
                     </div>
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="quantity" class="form-label">Quantidade</label>
                         <input type="number" class="form-control" name="quantity" id="quantity"
                             placeholder="Quantidade..." value="{{ product.quantity }}" required>
@@ -52,7 +62,7 @@
                     </div>
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="price" class="form-label">Preço</label>
                         <input type="text" class="form-control" name="price" id="price" placeholder="Preço..."
                             value="{{ product.price }}" required>
@@ -62,7 +72,7 @@
                     </div>
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="validity" class="form-label">Validade</label>
                         <input type="datetime" class="form-control" name="validity" id="validity"
                             placeholder="Validade..." value="{{ product.validity|date:'d/m/Y' }}" required>
@@ -72,18 +82,18 @@
                     </div>
 
 
-                    <div class="form-group mb-3">
+                    <div class="form-group mb-1">
                         <label for="description" class="form-label">Descrição</label>
                         <textarea class="form-control" name="description" id="description" rows="3"
                             placeholder="Descrição..." required>{{ product.description }}</textarea>
                         <div class="invalid-feedback">
                             Este campo é de preenchimento obrigatório
                         </div>
-                    </div> -->
+                    </div>
 
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary mt-3 mb-3">Editar produto</button>
+                        <button type="submit" class="btn btn-primary mt-3">Editar produto</button>
                     </div>
                 </form>
             </div>

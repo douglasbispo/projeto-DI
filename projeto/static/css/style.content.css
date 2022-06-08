@@ -43,6 +43,16 @@
     margin-bottom: 20px;
 }
 
+#more-details {
+    margin-left: 10px;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+#more-details:hover {
+    color: #56a5ff !important;
+}
+
 
 /*________________________________Products create page (template de cadastro)________________________________*/
 #product-create-container label {
@@ -57,6 +67,11 @@
 
 
 /*________________________________Products edit page (template de editar)________________________________*/
+#product-edit-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 #product-edit-container label {
     font-weight: bold;
 }
@@ -65,6 +80,10 @@
 #product-edit-container select,
 #product-edit-container textarea {
     font-size: 14px;
+}
+
+.img-preview {
+    width: 150px;
 }
 
 /*________________________________More Details________________________________*/
@@ -134,3 +153,83 @@ ul.messages {
 ul.messages li {
     list-style: none;
 }
+
+
+/*________________________________Login________________________________*/
+#login-container label,
+#register-container label {
+    font-weight: bold;
+}
+
+#login-container input,
+#register-container input {
+    font-size: 14px;
+}
+
+
+
+/* 
+.box {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.avatar::after {
+    opacity: 0;
+    font-family: FontAwesome;
+    content: "\f040";
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4px;
+    left: 4px;
+    width: 92px;
+    height: 92px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 350ms ease-in-out;
+}
+
+.avatar:hover::after {
+    opacity: 1;
+}
+
+.avatar {
+    box-sizing: border-box;
+    border: 4px solid #c0c0c0;
+    overflow: hidden;
+}
+
+.menu {
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    opacity: 0;
+    width: 100px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    top: 60%;
+    left: 60%;
+    z-index: -1;
+    transition: 350ms ease-in-out;
+}
+
+.box input {
+    display: none;
+}
+
+.box input:checked+div.menu {
+    opacity: 1;
+    z-index: 999;
+} */
